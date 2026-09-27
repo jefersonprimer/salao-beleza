@@ -1,0 +1,6 @@
+{
+  "name": "Beleza Urbana | Studio & Hair",
+  "description": "Salão de beleza e estética premium com atendimento personalizado, cortes, mechas, escova, tratamentos capilares e agendamento prático via WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
