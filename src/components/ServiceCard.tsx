@@ -64,7 +64,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           onClick={() => onBook(service.id)}
           className="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#FAF9F5] bg-[#191716] hover:bg-[#2E2A27] transition-colors whitespace-nowrap cursor-pointer"
         >
-          Agendar este serviço
+          Consultar serviço
         </button>
       </div>
     </article>

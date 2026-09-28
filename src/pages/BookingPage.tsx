@@ -145,6 +145,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
       dateStr: formatDateBr(selectedDate),
       timeStr: selectedTime,
       customerName: customerName.trim(),
+      customerPhone: customerPhone.trim(),
       notes: customerNotes.trim(),
     });
 
@@ -167,8 +168,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
         </h1>
 
         <p className="text-sm sm:text-base text-[#524C46]">
-          Selecione o procedimento, escolha a data e o horário disponível em tempo real
-          e confirme diretamente no WhatsApp do ateliê.
+          Selecione o serviço e informe o dia e horário que prefere. A equipe confirmará a disponibilidade pelo WhatsApp.
         </p>
       </div>
 
@@ -366,7 +366,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
               </strong>
             </span>
             <span className="text-[#6B6560]">
-              Atendimento das 09h às 19h
+              {salonConfig.operatingHoursText}
             </span>
           </div>
 
@@ -668,7 +668,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
 
               <div>
                 <dt className="text-xs uppercase tracking-wider text-[#8C867E]">
-                  WhatsApp de Contato
+                Seu telefone para contato
                 </dt>
                 <dd className="font-semibold text-[#191716] mt-0.5 tabular-nums">
                   {customerPhone}
@@ -710,9 +710,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
                 Como funciona a confirmação?
               </strong>
               <p>
-                Ao clicar no botão abaixo, sua mensagem pré-formatada será aberta no WhatsApp
-                oficial do Beleza Urbana (<strong>{salonConfig.whatsappFormatted}</strong>).
-                Nossa recepção valida os detalhes e finaliza a inclusão em instantes.
+                Ao continuar, o WhatsApp abrirá uma mensagem com o serviço, dia, horário e seus dados. O horário só fica confirmado após a resposta do salão.
               </p>
             </div>
           </div>
@@ -723,7 +721,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
               onClick={handleConfirmAndRedirect}
               className="w-full py-4 text-sm font-semibold uppercase tracking-wider text-[#FAF9F5] bg-[#191716] hover:bg-[#2E2A27] transition-colors flex items-center justify-center gap-3 cursor-pointer shadow-sm"
             >
-              <span>Confirmar via WhatsApp</span>
+              <span>Enviar pedido pelo WhatsApp</span>
               <svg className="w-5 h-5 text-[#FAF9F5]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.97.531 1.769.78 2.796.78 3.18 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.766-5.767-5.766zm3.374 8.204c-.14.394-.711.724-1.013.771-.284.043-.654.062-1.076-.073-.257-.082-.589-.193-.997-.369-1.748-.755-2.883-2.525-2.971-2.642-.088-.117-.714-.95-.714-1.81 0-.86.449-1.282.609-1.458.16-.176.349-.22.466-.22.116 0 .233.001.335.006.108.005.253-.041.395.3.146.352.497 1.213.541 1.301.044.088.073.191.015.308-.059.117-.088.19-.175.293-.088.103-.186.23-.266.309-.092.091-.188.19-.081.373.107.183.477.787 1.025 1.275.706.629 1.302.823 1.488.915.186.092.296.079.406-.047.11-.126.471-.548.597-.735.126-.188.252-.157.423-.094.172.063 1.09.514 1.277.607.187.094.312.14.358.219.046.079.046.458-.094.852z" />
               </svg>
@@ -732,7 +730,7 @@ export const BookingPage: React.FC<BookingPageProps> = ({
             {isConfirmed && (
               <div className="bg-[#FAF9F5] border border-[#191716] p-4 text-xs text-[#191716] text-center space-y-2">
                 <p className="font-semibold">
-                  ✓ Agendamento salvo com sucesso!
+                  ✓ Pedido preparado para envio pelo WhatsApp
                 </p>
                 <p className="text-[#6B6560]">
                   Caso o WhatsApp não tenha aberto automaticamente, verifique a permissão

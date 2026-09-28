@@ -3,6 +3,12 @@ import { services } from "../data/services";
 import { salonConfig } from "../config/salon";
 import { ServiceCard } from "../components/ServiceCard";
 import { ImageWithFallback } from "../components/ImageWithFallback";
+import portfolio0 from "../assets/images/instagram-portfolio-0.jpg";
+import portfolio01 from "../assets/images/instagram-portfolio-01.jpg";
+import portfolio02 from "../assets/images/instagram-portfolio-02.jpg";
+import portfolio1 from "../assets/images/instagram-portfolio-1.webp";
+import portfolio2 from "../assets/images/instagram-portfolio-2.webp";
+import portfolio3 from "../assets/images/instagram-portfolio-3.webp";
 
 interface HomePageProps {
   onNavigate: (path: string) => void;
@@ -25,17 +31,15 @@ export const HomePage: React.FC<HomePageProps> = ({
             <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#6B6560] font-medium">
               <span>{salonConfig.name}</span>
               <span aria-hidden="true">·</span>
-              <span>Jardins, São Paulo</span>
+              <span>Frederico Westphalen · RS</span>
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#191716] leading-[1.12] tracking-tight text-balance">
-              A arte do cuidado capilar em sua forma mais autêntica e precisa.
+              Sua beleza em destaque no seu dia inesquecível!
             </h1>
 
             <p className="text-base sm:text-lg text-[#524C46] max-w-xl leading-relaxed">
-              Especialistas em cortes visagistas, mechas sob medida e rituais de
-              reconstrução profunda. Atendimento exclusivo, com foco na saúde da fibra
-              e no seu bem-estar.
+              Maquiagem social embelezadora, produções para noivas, penteados e sobrancelhas. Agende seu horário em Frederico Westphalen.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
@@ -61,7 +65,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
               <div className="hidden sm:block">
                 <span className="font-semibold text-[#191716]">Atendimento:</span>{" "}
-                Com hora marcada
+                Atendimento com agendamento
               </div>
             </div>
           </div>
@@ -69,10 +73,10 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden bg-[#F2EFE9] border border-[#E8E5DD] shadow-sm">
               <ImageWithFallback
-                src="/src/assets/images/hero_salon_editorial_1790437952827.jpg"
-                alt="Interior do Ateliê Beleza Urbana em São Paulo"
-                fallbackTitle="Beleza Urbana"
-                fallbackSubtitle="Studio & Hair"
+                src={portfolio0}
+                alt="Mari, maquiagem e penteado"
+                fallbackTitle="Mari"
+                fallbackSubtitle="Maquiagem & Penteado"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -88,12 +92,10 @@ export const HomePage: React.FC<HomePageProps> = ({
               Sobre o Ateliê
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl text-[#191716] leading-tight text-balance">
-              Uma abordagem personalizada, onde a sua identidade é o ponto de partida.
+              Mari | Maquiagem e Penteado
             </h2>
             <p className="text-base text-[#4A4540] leading-relaxed">
-              No Beleza Urbana, acreditamos que cabelo bonito é sinônimo de cabelo saudável.
-              Nossa equipe alia formação técnica rigorosa em academias internacionais a
-              um ambiente tranquilo e intimista, livre de pressa.
+              Especialista em maquiagem social embelezadora e noivas, com atendimento de penteado e sobrancelha. Consulte valores e disponibilidade pelo WhatsApp.
             </p>
           </div>
 
@@ -101,34 +103,31 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 mt-12 border-t border-[#E8E5DD]">
             <div className="space-y-2">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#9E7B54]">
-                01. Diagnóstico Personalizado
+                01. Maquiagem
               </span>
-              <h3 className="font-serif text-xl text-[#191716]">Visagismo & Escuta Ativa</h3>
+              <h3 className="font-serif text-xl text-[#191716]">Social & Noivas</h3>
               <p className="text-sm text-[#524C46] leading-relaxed">
-                Antes de qualquer tesoura ou pincel, analisamos a rotina, o biotipo e
-                a textura natural para um resultado harmônico e prático de manter.
+                Maquiagem social embelezadora para ocasiões especiais e para o seu dia inesquecível.
               </p>
             </div>
 
             <div className="space-y-2">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#9E7B54]">
-                02. Fórmulas de Alta Pureza
+                02. Penteado
               </span>
-              <h3 className="font-serif text-xl text-[#191716]">Proteção & Restauração</h3>
+              <h3 className="font-serif text-xl text-[#191716]">Produção para ocasiões especiais</h3>
               <p className="text-sm text-[#524C46] leading-relaxed">
-                Trabalhamos exclusivamente com colorações de baixo impacto oxidativo e
-                ativos biofuncionais que tratam enquanto transformam.
+                Consulte opções e disponibilidade ao solicitar seu horário pelo WhatsApp.
               </p>
             </div>
 
             <div className="space-y-2">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#9E7B54]">
-                03. Pontualidade & Conforto
+                03. Sobrancelha
               </span>
-              <h3 className="font-serif text-xl text-[#191716]">Tempo Respeitado</h3>
+              <h3 className="font-serif text-xl text-[#191716]">Consulte os serviços</h3>
               <p className="text-sm text-[#524C46] leading-relaxed">
-                Agenda controlada sem sobreposição de clientes, garantindo atenção
-                integral do início ao fim do seu procedimento.
+                Fale com a Mari para saber quais atendimentos estão disponíveis e seus valores.
               </p>
             </div>
           </div>
@@ -146,8 +145,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               Cuidado especializado para cada necessidade
             </h2>
             <p className="text-sm sm:text-base text-[#524C46] max-w-xl">
-              Confira os procedimentos mais procurados em nosso espaço. Todos os valores
-              e condições são transparentes.
+              Escolha um serviço e envie sua preferência de dia e horário pelo WhatsApp.
             </p>
           </div>
 
@@ -165,7 +163,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               key={service.id}
               service={service}
               onBook={onSelectServiceAndBook}
-              showImage={true}
+              showImage={false}
             />
           ))}
         </div>
@@ -179,13 +177,10 @@ export const HomePage: React.FC<HomePageProps> = ({
               Experiência no Salão
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl text-[#191716] leading-tight">
-              Um refúgio de tranquilidade no coração de São Paulo.
+              Encontre a Mari em Frederico Westphalen.
             </h2>
             <p className="text-sm sm:text-base text-[#4A4540] leading-relaxed">
-              Projetamos o espaço com iluminação natural filtrada, acabamentos em
-              pedra e madeira nobre, além de bancadas amplas e isoladas. Você desfruta
-              de café especial, seleção de chás e silêncio ou música ambiente suave
-              durante seu momento de autocuidado.
+              R. Alfredo Haubert, 788 · Frederico Westphalen - RS · CEP 98400-000. Consulte horários pelo WhatsApp.
             </p>
             <div className="pt-2">
               <button
@@ -200,19 +195,19 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <div className="aspect-[4/5] bg-[#E8E5DD] overflow-hidden">
               <ImageWithFallback
-                src="/src/assets/images/service_hair_color_1790437974512.jpg"
-                alt="Coloração e mechas no Beleza Urbana"
-                fallbackTitle="Coloração"
-                fallbackSubtitle="Mechas & Balayage"
+                src={portfolio1}
+                alt="Maquiagem para ocasiões especiais"
+                fallbackTitle="Maquiagem"
+                fallbackSubtitle="Social & Noivas"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="aspect-[4/5] bg-[#E8E5DD] overflow-hidden">
               <ImageWithFallback
-                src="/src/assets/images/service_treatment_spa_1790437984622.jpg"
-                alt="Spa do couro cabeludo no Beleza Urbana"
-                fallbackTitle="Terapia Capilar"
-                fallbackSubtitle="Spa do Couro"
+                src={portfolio2}
+                alt="Penteado para ocasiões especiais"
+                fallbackTitle="Penteado"
+                fallbackSubtitle="Para seu dia especial"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -220,52 +215,29 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      {/* Attributable Client Testimonials */}
+      {/* Official profile link */}
       <section className="max-w-6xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
           <span className="text-xs uppercase tracking-widest text-[#6B6560] font-medium">
-            Depoimentos
+            Instagram
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl text-[#191716]">
-            A experiência contada por quem confia em nós
+            Veja os trabalhos da Mari
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-[#FFFFFF] border border-[#E8E5DD] p-7 flex flex-col justify-between">
-            <p className="text-sm text-[#4A4540] italic leading-relaxed mb-6">
-              "O atendimento com visagismo fez toda a diferença. O corte valorizou o
-              movimento natural do meu cabelo sem eu precisar passar horas modelando
-              em casa."
-            </p>
-            <div className="border-t border-[#E8E5DD] pt-4 text-xs">
-              <span className="font-semibold text-[#191716] block">Mariana Silveira</span>
-              <span className="text-[#8C867E]">Corte Feminino com Finalização · Cliente há 2 anos</span>
-            </div>
-          </div>
-
-          <div className="bg-[#FFFFFF] border border-[#E8E5DD] p-7 flex flex-col justify-between">
-            <p className="text-sm text-[#4A4540] italic leading-relaxed mb-6">
-              "Fiz as mechas iluminadas com eles e a saúde do meu fio permaneceu
-              impecável. O teste de mecha antes dá uma segurança ímpar."
-            </p>
-            <div className="border-t border-[#E8E5DD] pt-4 text-xs">
-              <span className="font-semibold text-[#191716] block">Beatriz Ramos</span>
-              <span className="text-[#8C867E]">Balayage Iluminada & Spa Capilar</span>
-            </div>
-          </div>
-
-          <div className="bg-[#FFFFFF] border border-[#E8E5DD] p-7 flex flex-col justify-between">
-            <p className="text-sm text-[#4A4540] italic leading-relaxed mb-6">
-              "Pontualidade britânica e um ambiente acolhedor. Agendar pelo WhatsApp é
-              super rápido e a confirmação é imediata."
-            </p>
-            <div className="border-t border-[#E8E5DD] pt-4 text-xs">
-              <span className="font-semibold text-[#191716] block">Juliana Esteves</span>
-              <span className="text-[#8C867E]">Escova Modelada Recorrente</span>
-            </div>
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {[
+            { src: portfolio01, alt: "Produção de maquiagem e penteado para festa" },
+            { src: portfolio02, alt: "Maquiagem social em cliente do salão" },
+            { src: portfolio3, alt: "Maquiagem de noiva durante a preparação" },
+          ].map((photo) => (
+            <a key={photo.src} href={salonConfig.instagramUrl} target="_blank" rel="noopener noreferrer" className="block aspect-[4/5] overflow-hidden bg-[#F2EFE9]">
+              <img src={photo.src} alt={photo.alt} loading="lazy" className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500" />
+            </a>
+          ))}
         </div>
+        <a href={salonConfig.instagramUrl} target="_blank" rel="noopener noreferrer" className="block text-center border border-[#E8E5DD] bg-white p-5 text-sm font-semibold text-[#191716] hover:bg-[#F3F1EC]">Ver mais trabalhos no Instagram ↗</a>
       </section>
 
       {/* Location & Booking CTA Banner */}
@@ -276,11 +248,10 @@ export const HomePage: React.FC<HomePageProps> = ({
               Agendamento Fácil
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl leading-tight">
-              Pronta para renovar o visual com profissionais dedicados?
+              Prepare-se para o seu dia especial.
             </h2>
             <p className="text-sm sm:text-base text-[#A39E96] leading-relaxed">
-              Selecione o serviço desejado, confira a disponibilidade em tempo real e
-              confirme seu horário diretamente pelo WhatsApp oficial do salão.
+              Envie o serviço, dia e horário desejados. A Mari confirma a disponibilidade pelo WhatsApp.
             </p>
           </div>
 
@@ -297,7 +268,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-4 text-xs font-semibold uppercase tracking-wider text-[#FAF9F5] border border-[#524C46] hover:bg-[#2A2725] transition-colors whitespace-nowrap text-center"
             >
-              Falar no WhatsApp
+              Falar pelo WhatsApp
             </a>
           </div>
         </div>

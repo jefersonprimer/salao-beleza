@@ -24,12 +24,20 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, onNavigate }) => {
   return (
     <header className="sticky top-0 z-40 bg-[#FAF9F5]/90 backdrop-blur-md border-b border-[#E8E5DD] transition-all">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Zone 1: Single text element wordmark */}
+        {/* Brand mark and wordmark */}
         <button
           onClick={() => handleNavClick("/")}
-          className="font-serif text-2xl tracking-tight text-[#191716] hover:opacity-80 transition-opacity text-left cursor-pointer whitespace-nowrap"
+          className="flex min-w-0 items-center gap-2 font-serif text-xl tracking-tight text-[#191716] hover:opacity-80 transition-opacity text-left cursor-pointer"
         >
-          {salonConfig.name}
+          <img
+            src="/logo.png"
+            alt=""
+            aria-hidden="true"
+            className="h-11 w-11 shrink-0 object-contain"
+          />
+          <span className="truncate whitespace-nowrap md:overflow-visible md:text-clip">
+            {salonConfig.name}
+          </span>
         </button>
 
         {/* Zone 2: 4-6 clean text navigation links */}

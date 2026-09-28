@@ -16,11 +16,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               {salonConfig.name}
             </span>
             <p className="text-sm text-[#A39E96] max-w-sm leading-relaxed">
-              {salonConfig.tagline} Espaço dedicado à autenticidade, corte visagista,
-              saúde da fibra capilar e bem-estar.
+              {salonConfig.tagline}
             </p>
             <div className="pt-2 text-xs text-[#8C867E]">
-              Atendimento exclusivo com hora marcada em São Paulo.
+              Fale com o salão pelo WhatsApp para consultar serviços e agendar.
             </div>
           </div>
 
@@ -30,10 +29,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               Localização & Horários
             </h4>
             <address className="not-italic text-sm text-[#A39E96] space-y-1.5 leading-relaxed">
-              <p>{salonConfig.address.street}</p>
-              <p>{salonConfig.address.neighborhood} · {salonConfig.address.city} - {salonConfig.address.state}</p>
+              <p>Endereço e localização</p>
+              <p>Consulte pelo WhatsApp</p>
               <p className="pt-2 text-[#FAF9F5] font-medium">{salonConfig.operatingHoursText}</p>
-              <p className="text-xs text-[#8C867E]">Domingo e Segunda: Fechado</p>
+              <p className="text-xs text-[#8C867E]">Horários sujeitos a confirmação</p>
             </address>
           </div>
 
@@ -77,8 +76,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#8C867E] gap-4">
           <p>© {new Date().getFullYear()} {salonConfig.name}. Todos os direitos reservados.</p>
           <div className="flex items-center gap-6">
-            <span>Rua Oscar Freire · Jardins</span>
-            <span>Agendamento Oficial WhatsApp: {salonConfig.whatsappFormatted}</span>
+            <span>{salonConfig.instagram}</span>
           </div>
         </div>
       </div>

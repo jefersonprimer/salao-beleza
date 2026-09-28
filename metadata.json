@@ -1,6 +1,6 @@
 {
-  "name": "Beleza Urbana | Studio & Hair",
-  "description": "Salão de beleza e estética premium com atendimento personalizado, cortes, mechas, escova, tratamentos capilares e agendamento prático via WhatsApp.",
+  "name": "Essência de Mulher - Studio de Beleza",
+  "description": "Maquiagem social embelezadora, maquiagem para noivas, penteados e sobrancelhas em Frederico Westphalen, RS. Reserve pelo WhatsApp.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

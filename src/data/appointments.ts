@@ -188,7 +188,7 @@ export function getAvailabilityForDate(dateStr: string, now: Date = new Date()):
   if (!businessDay || !businessDay.isOpen) {
     return {
       isOpen: false,
-      reason: "O salão não abre aos domingos e segundas-feiras.",
+      reason: "Consulte a disponibilidade pelo WhatsApp.",
       slots: [],
     };
   }

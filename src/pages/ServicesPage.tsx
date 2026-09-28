@@ -36,12 +36,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
         </div>
 
         <h1 className="font-serif text-4xl sm:text-5xl text-[#191716] tracking-tight">
-          Serviços, Duração & Investimento
+          Maquiagem, penteado & sobrancelha
         </h1>
 
         <p className="text-base text-[#524C46] leading-relaxed">
-          Tabela completa e transparente com todas as especificações técnicas,
-          recomendações e tempo estimado de cada atendimento.
+          Valores aproximados para referência. Confirme o preço final, duração e disponibilidade diretamente com a Mari pelo WhatsApp.
         </p>
       </div>
 
@@ -148,14 +147,14 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             </strong>
             <p>
               Caso necessite alterar seu dia ou horário, pedimos aviso prévio de
-              no mínimo 24 horas via WhatsApp.
+              diretamente pelo WhatsApp.
             </p>
           </div>
         </div>
 
         <div className="pt-4 border-t border-[#D8D4CA] flex flex-col sm:flex-row items-center justify-between gap-4">
           <span className="text-xs text-[#6B6560]">
-            Dúvidas sobre qual procedimento escolher para o seu cabelo?
+            Dúvidas sobre qual serviço escolher?
           </span>
           <button
             onClick={() => onNavigate("/reserva")}

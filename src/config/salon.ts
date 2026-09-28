@@ -7,33 +7,34 @@ export interface BusinessHour {
 }
 
 export const salonConfig = {
-  name: "Beleza Urbana",
-  subname: "Studio & Hair",
-  tagline: "Cuidado personalizado, técnica refinada e beleza autêntica.",
-  whatsapp: "55991710903",
-  whatsappFormatted: "+55 99 1710-903",
-  phone: "+55 (99) 91710-903",
+  name: "Essência de Mulher - Studio de Beleza",
+  subname: "Mari | Maquiagem e Penteado",
+  tagline: "Sua beleza em destaque no seu dia inesquecível!",
+  whatsapp: "559992787174",
+  whatsappFormatted: "+55 (99) 9278-7174",
+  phone: "+55 (99) 9278-7174",
   address: {
-    street: "Rua Oscar Freire, 1024",
-    neighborhood: "Jardins",
-    city: "São Paulo",
-    state: "SP",
-    cep: "01426-000",
-    full: "Rua Oscar Freire, 1024 - Jardins, São Paulo - SP",
+    street: "R. Alfredo Haubert, 788",
+    neighborhood: "",
+    city: "Frederico Westphalen",
+    state: "RS",
+    cep: "98400-000",
+    full: "R. Alfredo Haubert, 788 - Frederico Westphalen - RS, 98400-000",
   },
-  instagram: "@salaobelezaurbana",
-  instagramUrl: "https://instagram.com",
-  operatingHoursText: "Terça a Sábado das 09h às 19h",
+  instagram: "@essenciademulhersalao_",
+  instagramUrl: "https://www.instagram.com/essenciademulhersalao_/",
+  operatingHoursText: "Consulte os horários pelo WhatsApp",
+  // Collect preferred dates; the salon confirms its actual hours on WhatsApp.
   hours: [
-    { dayOfWeek: 0, dayName: "Domingo", isOpen: false, openTime: "", closeTime: "" },
-    { dayOfWeek: 1, dayName: "Segunda-feira", isOpen: false, openTime: "", closeTime: "" },
-    { dayOfWeek: 2, dayName: "Terça-feira", isOpen: true, openTime: "09:00", closeTime: "19:00" },
-    { dayOfWeek: 3, dayName: "Quarta-feira", isOpen: true, openTime: "09:00", closeTime: "19:00" },
-    { dayOfWeek: 4, dayName: "Quinta-feira", isOpen: true, openTime: "09:00", closeTime: "19:00" },
-    { dayOfWeek: 5, dayName: "Sexta-feira", isOpen: true, openTime: "09:00", closeTime: "19:00" },
-    { dayOfWeek: 6, dayName: "Sábado", isOpen: true, openTime: "09:00", closeTime: "19:00" },
+    { dayOfWeek: 0, dayName: "Domingo", isOpen: true, openTime: "", closeTime: "" },
+    { dayOfWeek: 1, dayName: "Segunda-feira", isOpen: true, openTime: "", closeTime: "" },
+    { dayOfWeek: 2, dayName: "Terça-feira", isOpen: true, openTime: "", closeTime: "" },
+    { dayOfWeek: 3, dayName: "Quarta-feira", isOpen: true, openTime: "", closeTime: "" },
+    { dayOfWeek: 4, dayName: "Quinta-feira", isOpen: true, openTime: "", closeTime: "" },
+    { dayOfWeek: 5, dayName: "Sexta-feira", isOpen: true, openTime: "", closeTime: "" },
+    { dayOfWeek: 6, dayName: "Sábado", isOpen: true, openTime: "", closeTime: "" },
   ] as BusinessHour[],
-  // Default standard daily slots (every 60 mins from 09:00 to 18:00)
+  // Suggested times only; the salon confirms availability via WhatsApp.
   standardSlots: [
     "09:00",
     "10:00",
@@ -52,23 +53,25 @@ export interface WhatsAppMessageParams {
   dateStr: string;
   timeStr: string;
   customerName: string;
+  customerPhone?: string;
   notes?: string;
 }
 
 export function buildWhatsAppUrl(params: WhatsAppMessageParams): string {
-  const { serviceName, dateStr, timeStr, customerName, notes } = params;
+  const { serviceName, dateStr, timeStr, customerName, customerPhone, notes } = params;
 
   let message = `Olá! Gostaria de agendar um horário.\n\n` +
     `Serviço: ${serviceName}\n` +
     `Data: ${dateStr}\n` +
     `Horário: ${timeStr}\n` +
-    `Nome: ${customerName}`;
+    `Nome: ${customerName}` +
+    (customerPhone ? `\nTelefone para contato: ${customerPhone}` : "");
 
   if (notes && notes.trim()) {
     message += `\nObservação: ${notes.trim()}`;
   }
 
-  message += `\n\nPoderiam confirmar meu agendamento, por favor?`;
+  message += `\n\nEste é um pedido de agendamento. Poderiam confirmar a disponibilidade, por favor?`;
 
   return `https://wa.me/${salonConfig.whatsapp}?text=${encodeURIComponent(message)}`;
 }

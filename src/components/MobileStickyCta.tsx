@@ -22,10 +22,10 @@ export const MobileStickyCta: React.FC<MobileStickyCtaProps> = ({
       <div className="flex items-center justify-between gap-3 max-w-md mx-auto">
         <div className="flex flex-col text-left">
           <span className="text-xs font-semibold text-[#191716]">
-            Atendimento com hora marcada
+            Consulte disponibilidade
           </span>
           <span className="text-[11px] text-[#6B6560]">
-            Ter a Sáb · 09h às 19h
+            Fale com o salão pelo WhatsApp
           </span>
         </div>
         <button
